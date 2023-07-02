@@ -14,4 +14,14 @@ xhr.onload = function() {
   var list = document.createElement('ul');
   // Add the items to the list.
   for (var i = 0; i < items.length; i++) {
-    var item = items[i
+    var item = items[i];
+    // Create a list item for the item.
+    var li = document.createElement('li');
+    // Add the item's name to the list item.
+    li.innerHTML = item.name;
+    // Add the list item to the list.
+    list.appendChild(li);
+  }
+  // Add the list to the document.
+  document.body.appendChild(list);
+};
